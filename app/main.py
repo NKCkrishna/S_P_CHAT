@@ -26,6 +26,11 @@ if 'messages' not in st.session_state:
 # ─────────────── CONFIG ───────────────
 st.set_page_config(page_title="SustainifyAI", layout="wide")
 
+# Load secrets from Streamlit Cloud
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+GEE_EMAIL = st.secrets["GEE_EMAIL"]
+GEE_PROJECT = st.secrets["GEE_PROJECT"]
+
 # Toggle Dark Mode
 dark_mode = st.sidebar.toggle("🌙 Dark Mode", value=False)
 st.markdown(

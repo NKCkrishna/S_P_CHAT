@@ -26,12 +26,71 @@ SustainifyAI is a smart, AI-powered sustainability dashboard that provides real-
 
 ## 📦 Installation
 
-```bash
-git clone https://github.com/your-username/SustainifyAI.git
-cd SustainifyAI
-pip install -r requirements.txt
-streamlit run app/main.py
+A Streamlit application for sustainable agriculture and energy management.
 
+## Deployment Instructions
+
+### Prerequisites
+1. A GitHub account
+2. A Streamlit Cloud account (https://streamlit.io/cloud)
+3. Google Earth Engine account
+4. Google Gemini API key
+
+### Deployment Steps
+
+1. **Fork this repository** to your GitHub account.
+
+2. **Set up Streamlit Cloud**:
+   - Go to https://streamlit.io/cloud
+   - Click "New app"
+   - Connect your GitHub repository
+   - Set the main file path to `app/main.py`
+   - Add the following secrets in the Streamlit Cloud dashboard:
+     - `GEMINI_API_KEY`: Your Google Gemini API key
+     - `GEE_EMAIL`: Your Google Earth Engine email
+     - `GEE_PROJECT`: Your Google Earth Engine project name
+
+3. **Deploy the application**:
+   - Click "Deploy"
+   - Wait for the deployment to complete
+
+4. **Access your application**:
+   - Once deployed, you'll receive a URL to access your application
+   - Share this URL with others to use your application
+
+## Local Development
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/SustainifyAI.git
+   cd SustainifyAI
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Set up environment variables:
+   - Create a `.env` file with your API keys
+   - Or use the `.streamlit/secrets.toml` file
+
+4. Run the application:
+   ```bash
+   streamlit run app/main.py
+   ```
+
+## Features
+
+- Weather data analysis
+- NDVI (Normalized Difference Vegetation Index) mapping
+- Agricultural suggestions
+- Energy management recommendations
+- AI-powered chatbot for sustainability queries
+
+## License
+
+MIT License
 
 SustainifyAI/
 │
