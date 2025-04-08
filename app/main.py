@@ -41,6 +41,7 @@ except Exception as e:
 try:
     genai.configure(api_key=GEMINI_API_KEY)
     model = genai.GenerativeModel('gemini-pro')
+    st.success("✅ Gemini AI initialized successfully")
 except Exception as e:
     st.error(f"Error initializing Gemini: {str(e)}")
     st.stop()
