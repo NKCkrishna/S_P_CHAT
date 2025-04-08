@@ -48,8 +48,11 @@ except Exception as e:
 # Initialize Earth Engine
 try:
     ee.Initialize(project=GEE_PROJECT)
+    st.success("✅ Earth Engine initialized successfully")
 except Exception as e:
-    st.warning(f"GEE Initialization warning: {str(e)}")
+    st.warning(f"⚠️ GEE Initialization warning: {str(e)}")
+    # Continue without GEE functionality
+    pass
 
 # Main UI
 st.title("🌱 SustainifyAI")
